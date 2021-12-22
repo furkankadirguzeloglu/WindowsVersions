@@ -1,0 +1,55 @@
+ntdll!_KPROCESS
+   +0x000 Header           : _DISPATCHER_HEADER
+   +0x018 ProfileListHead  : _LIST_ENTRY
+   +0x028 DirectoryTableBase : Uint8B
+   +0x030 ThreadListHead   : _LIST_ENTRY
+   +0x040 ProcessLock      : Uint4B
+   +0x044 ProcessTimerDelay : Uint4B
+   +0x048 DeepFreezeStartTime : Uint8B
+   +0x050 Affinity         : _KAFFINITY_EX
+   +0x0f8 AffinityPadding  : [12] Uint8B
+   +0x158 ReadyListHead    : _LIST_ENTRY
+   +0x168 SwapListEntry    : _SINGLE_LIST_ENTRY
+   +0x170 ActiveProcessors : _KAFFINITY_EX
+   +0x218 ActiveProcessorsPadding : [12] Uint8B
+   +0x278 AutoAlignment    : Pos 0, 1 Bit
+   +0x278 DisableBoost     : Pos 1, 1 Bit
+   +0x278 DisableQuantum   : Pos 2, 1 Bit
+   +0x278 DeepFreeze       : Pos 3, 1 Bit
+   +0x278 TimerVirtualization : Pos 4, 1 Bit
+   +0x278 CheckStackExtents : Pos 5, 1 Bit
+   +0x278 CacheIsolationEnabled : Pos 6, 1 Bit
+   +0x278 PpmPolicy        : Pos 7, 3 Bits
+   +0x278 VaSpaceDeleted   : Pos 10, 1 Bit
+   +0x278 ReservedFlags    : Pos 11, 21 Bits
+   +0x278 ProcessFlags     : Int4B
+   +0x27c ActiveGroupsMask : Uint4B
+   +0x280 BasePriority     : Char
+   +0x281 QuantumReset     : Char
+   +0x282 Visited          : Char
+   +0x283 Flags            : _KEXECUTE_OPTIONS
+   +0x284 ThreadSeed       : [20] Uint2B
+   +0x2ac ThreadSeedPadding : [12] Uint2B
+   +0x2c4 IdealProcessor   : [20] Uint2B
+   +0x2ec IdealProcessorPadding : [12] Uint2B
+   +0x304 IdealNode        : [20] Uint2B
+   +0x32c IdealNodePadding : [12] Uint2B
+   +0x344 IdealGlobalNode  : Uint2B
+   +0x346 Spare1           : Uint2B
+   +0x348 StackCount       : _KSTACK_COUNT
+   +0x350 ProcessListEntry : _LIST_ENTRY
+   +0x360 CycleTime        : Uint8B
+   +0x368 ContextSwitches  : Uint8B
+   +0x370 SchedulingGroup  : Ptr64 _KSCHEDULING_GROUP
+   +0x378 FreezeCount      : Uint4B
+   +0x37c KernelTime       : Uint4B
+   +0x380 UserTime         : Uint4B
+   +0x384 ReadyTime        : Uint4B
+   +0x388 UserDirectoryTableBase : Uint8B
+   +0x390 AddressPolicy    : UChar
+   +0x391 Spare2           : [71] UChar
+   +0x3d8 InstrumentationCallback : Ptr64 Void
+   +0x3e0 SecureState      : <anonymous-tag>
+   +0x3e8 KernelWaitTime   : Uint8B
+   +0x3f0 UserWaitTime     : Uint8B
+   +0x3f8 EndPadding       : [8] Uint8B
